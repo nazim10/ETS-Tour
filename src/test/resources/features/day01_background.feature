@@ -8,7 +8,7 @@ Feature: ets tur sitesi login
   Scenario: TC-01 ets tur login
     When giris butonuna basilir
     And eposta girilir
-    And password girilri
+    And password girilir
     When giris yap butonuna basilir
     Then sayfaya gidilemedigi dogrulanir
 

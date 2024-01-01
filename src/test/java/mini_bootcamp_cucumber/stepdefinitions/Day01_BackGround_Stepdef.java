@@ -12,10 +12,12 @@ import mini_bootcamp_cucumber.utilities.ReusableMethods;
 import static org.junit.Assert.assertEquals;
 
 public class Day01_BackGround_Stepdef {
-    Day01_Background_Page page=new Day01_Background_Page();
-    String expectedUrl="";
-    @Given("ets tur sitesine gidilir")
-    public void etsTurSitesineGidilir() {
+    Day01_Background_Page page = new Day01_Background_Page();
+    String expectedUrl = "";
+
+    @Given("{string} sitesine gidilir")
+    public void sitesineGidilir(String arg0) {
+
         Driver.getDriver().get(ConfigurationReader.getProperty("etstur"));
         expectedUrl = Driver.getDriver().getCurrentUrl();
 
@@ -23,8 +25,11 @@ public class Day01_BackGround_Stepdef {
 
     @And("login butonu ustune gidilir")
     public void loginButonuUstuneGidilir() {
+
+        // ReusableMethods.wait(2);
+        // page.kabul.click();
+        // ReusableMethods.wait(2);
         ReusableMethods.hover(page.login);
-        ReusableMethods.wait(2);
     }
 
     @When("giris butonuna basilir")
@@ -40,7 +45,7 @@ public class Day01_BackGround_Stepdef {
         ReusableMethods.wait(2);
     }
 
-    @And("password girilri")
+    @And("password girilir")
     public void passwordGirilri() {
         page.password.sendKeys("524353443");
         ReusableMethods.wait(2);
@@ -54,8 +59,8 @@ public class Day01_BackGround_Stepdef {
 
     @Then("sayfaya gidilemedigi dogrulanir")
     public void sayfayaGidilemedigiDogrulanir() {
-        String actualUrl= Driver.getDriver().getCurrentUrl();
-        assertEquals("hakan",actualUrl);
+        String actualUrl = Driver.getDriver().getCurrentUrl();
+        assertEquals("hakan", actualUrl);
         Driver.closeDriver();
 
     }
@@ -81,7 +86,7 @@ public class Day01_BackGround_Stepdef {
 
     @And("uyelik icin eposta girilir")
     public void uyelikIcinEpostaGirilir() {
-    page.eposta.sendKeys("haklf@gmail.com");
+        page.eposta.sendKeys("haklf@gmail.com");
     }
 
     @And("ceptelefonu girilir")
@@ -115,4 +120,6 @@ public class Day01_BackGround_Stepdef {
         page.uyelikUyeOl.click();
 
     }
+
+
 }

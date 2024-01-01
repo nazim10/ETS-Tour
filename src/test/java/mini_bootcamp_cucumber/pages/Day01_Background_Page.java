@@ -8,37 +8,39 @@ import org.openqa.selenium.support.PageFactory;
 public class Day01_Background_Page {
 
     public Day01_Background_Page() {
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = "//div[@class='dropbtn nothidden']")
+    @FindBy(id = "ba05d7b4-d023-4c31-a95c-767dd32a3123")
+    public WebElement kabul;
+    @FindBy(xpath = "//span[@class =\"MuiButton-startIcon MuiButton-iconSizeSmall css-906rka\"])[2]")
     public WebElement login;
-    @FindBy (xpath = "//button[@data-target='#modalSignIn']")
+    @FindBy(xpath = "//button[@data-target='#modalSignIn']")
     public WebElement giris;
-    @FindBy (id = "tb-contactEmailSignIn")
+    @FindBy(id = "tb-contactEmailSignIn")
     public WebElement email;
-    @FindBy (id = "showPass_2")
+    @FindBy(id = "showPass_2")
     public WebElement password;
-    @FindBy (id = "btn-signin")
+    @FindBy(id = "btn-signin")
     public WebElement girisYap;
-    @FindBy (xpath = "//button[@data-target='#modalSignUp']")
+    @FindBy(xpath = "//button[@data-target='#modalSignUp']")
     public WebElement uyeOl;
-    @FindBy (id = "tb-signUp-firstName")
+    @FindBy(id = "tb-signUp-firstName")
     public WebElement ad;
-    @FindBy (id = "tb-signUp-lastName")
+    @FindBy(id = "tb-signUp-lastName")
     public WebElement soyad;
-    @FindBy (id = "tb-contactEmailSignUp")
+    @FindBy(id = "tb-contactEmailSignUp")
     public WebElement eposta;
-    @FindBy (id = "contactFormPhoneNumber")
+    @FindBy(id = "contactFormPhoneNumber")
     public WebElement ceptel;
-    @FindBy (id = "showPass_0")
+    @FindBy(id = "showPass_0")
     public WebElement sifre1;
-    @FindBy (id = "showPass_1")
+    @FindBy(id = "showPass_1")
     public WebElement sifre2;
-    @FindBy (xpath = "//a[@class='agreement-usage']/preceding-sibling::span[@class='span-for-checkbox']")
+    @FindBy(xpath = "//a[@class='agreement-usage']/preceding-sibling::span[@class='span-for-checkbox']")
     public WebElement kullanim;
-    @FindBy (xpath = "//label[@for='cb-dealCampaign']")
+    @FindBy(xpath = "//label[@for='cb-dealCampaign']")
     public WebElement firsat;
-    @FindBy (id = "btn-signup")
+    @FindBy(id = "btn-signup")
     public WebElement uyelikUyeOl;
 }
