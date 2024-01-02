@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="32.144" tests="2" skipped="0" failures="2" errors="0">
+<testcase classname="ets tur sitesi login" name="TC-01 ets tur login" time="25.267">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;h[akan]&gt; but was:&lt;h[ttps://www.etstur.com/]&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<h[akan]> but was:<h[ttps://www.etstur.com/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at mini_bootcamp_cucumber.stepdefinitions.Day01_BackGround_Stepdef.sayfayaGidilemedigiDogrulanir(Day01_BackGround_Stepdef.java:59)
+	at ✽.sayfaya gidilemedigi dogrulanir(file:///C:/Users/Nutzer/Desktop/Tester/Projects-Mini%20Bootcamps/Mini%20Bootcamp%20Cucumber/Cucumber%20-%20Mini%20Bootcamp%20-Nazim/Ets_Tur/src/test/resources/features/day01_background.feature:14)
+]]>
+</failure>
+<system-out><![CDATA[
+Given "ets tur" sitesine gidilir............................................passed
+And login butonu ustune gidilir.............................................passed
+When giris butonuna basilir.................................................passed
+And eposta girilir..........................................................passed
+And password girilir........................................................passed
+When giris yap butonuna basilir.............................................passed
+Then sayfaya gidilemedigi dogrulanir........................................failed
+]]></system-out>
+</testcase>
+<testcase classname="ets tur sitesi login" name="TC-02 ets tur uyelik" time="6.653">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;h[akan]&gt; but was:&lt;h[ttps://www.etstur.com/]&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<h[akan]> but was:<h[ttps://www.etstur.com/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at mini_bootcamp_cucumber.stepdefinitions.Day01_BackGround_Stepdef.sayfayaGidilemedigiDogrulanir(Day01_BackGround_Stepdef.java:59)
+	at ✽.sayfaya gidilemedigi dogrulanir(file:///C:/Users/Nutzer/Desktop/Tester/Projects-Mini%20Bootcamps/Mini%20Bootcamp%20Cucumber/Cucumber%20-%20Mini%20Bootcamp%20-Nazim/Ets_Tur/src/test/resources/features/day01_background.feature:29)
+]]>
+</failure>
+<system-out><![CDATA[
+Given "ets tur" sitesine gidilir............................................passed
+And login butonu ustune gidilir.............................................passed
+And uye ol butonuna basilir.................................................passed
+And ad girilir..............................................................passed
+And soyad girilir...........................................................passed
+And uyelik icin eposta girilir..............................................passed
+And ceptelefonu girilir.....................................................passed
+And uyelik icin password girilir............................................passed
+And password yeniden girlir.................................................passed
+And kullanim sartlari checkbox secilir......................................passed
+And kampanyalara checkbox secilir...........................................passed
+When uyelik sayfasinda uye ol butonuna basilir..............................passed
+Then sayfaya gidilemedigi dogrulanir........................................failed
+]]></system-out>
+</testcase>
+</testsuite>

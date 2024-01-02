@@ -11,36 +11,35 @@ public class Day01_Background_Page {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id = "ba05d7b4-d023-4c31-a95c-767dd32a3123")
-    public WebElement kabul;
     @FindBy(xpath = "//span[@class =\"MuiButton-startIcon MuiButton-iconSizeSmall css-906rka\"])[2]")
     public WebElement login;
-    @FindBy(xpath = "//button[@data-target='#modalSignIn']")
+    @FindBy(xpath = "//button[text()='Giriş Yap']")
     public WebElement giris;
-    @FindBy(id = "tb-contactEmailSignIn")
+
+    @FindBy(xpath = "//input[@name =\"email\"]")
     public WebElement email;
-    @FindBy(id = "showPass_2")
+    @FindBy(xpath = "//input[@name =\"password\"]")
     public WebElement password;
-    @FindBy(id = "btn-signin")
+    @FindBy(xpath = "//button [@type = \"submit\"]")
     public WebElement girisYap;
-    @FindBy(xpath = "//button[@data-target='#modalSignUp']")
+    @FindBy(xpath = "//*[text() =\"Üye Ol\"]")
     public WebElement uyeOl;
-    @FindBy(id = "tb-signUp-firstName")
+    @FindBy(xpath = "//input[@name =\"name\"]")
     public WebElement ad;
-    @FindBy(id = "tb-signUp-lastName")
+    @FindBy(xpath = "//input[@name =\"surname\"]")
     public WebElement soyad;
-    @FindBy(id = "tb-contactEmailSignUp")
+    @FindBy(xpath = "//input[@name =\"email\"]")
     public WebElement eposta;
-    @FindBy(id = "contactFormPhoneNumber")
+    @FindBy(xpath = "//input[@placeholder=\"Telefon Numarası\"]")
     public WebElement ceptel;
-    @FindBy(id = "showPass_0")
+    @FindBy(xpath = "//input[@name =\"password\"]")
     public WebElement sifre1;
-    @FindBy(id = "showPass_1")
+    @FindBy(xpath = "//input[@name =\"rePassword\"]")
     public WebElement sifre2;
-    @FindBy(xpath = "//a[@class='agreement-usage']/preceding-sibling::span[@class='span-for-checkbox']")
+    @FindBy(xpath = "//input[@name =\"acceptKvk\"]")
     public WebElement kullanim;
-    @FindBy(xpath = "//label[@for='cb-dealCampaign']")
+    @FindBy(xpath = "//input[@name =\"allowMarketing\"]")
     public WebElement firsat;
-    @FindBy(id = "btn-signup")
+    @FindBy(xpath = "(//span [@class =\"MuiButton-endIcon MuiButton-iconSizeSmall css-jkqy1l\"])[2]")
     public WebElement uyelikUyeOl;
 }
